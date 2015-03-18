@@ -1,0 +1,78 @@
+--- 
+layout: default 
+#title: "Welcome to Jekyll!" 
+#date: 2015-03-17 21:23:43 
+#categories: jekyll update 
+---
+
+<h2>Introduction of Web Technology and Responsive Design</h2>
+<h5>So, why HTML5?</h5>
+<p>The primary one is consistent, defined error handling. As you know, HTML purposely supports 'tag soup', or the ability to write malformed code and have it corrected into a valid document. The problem is that the rules for doing this aren't written down anywhere. When a new browser vendor wants to enter the market, they just have to test malformed documents in various browsers (especially IE) and reverse-engineer their error handling. If they don't, then many pages won't display correctly (estimates place roughly 90% of pages on the net as being at least somewhat malformed). So, HTML5 is attempting to discover and codify this error handling, so that browser developers can all standardize and greatly reduce the time and money required to display things consistently. As well, long in the future after HTML has died as a document format, historians may still want to read our documents, and having a completely defined parsing algorithm will greatly aid this.
+</p>
+<p>The secondary goal of HTML5 is to develop the ability of the browser to be an application platform, via HTML, CSS, and Javascript. Many elements have been added directly to the language that are currently (in HTML4) Flash or JS-based hacks, such as canvas, video, and audio. Useful things such as Local Storage (a js-accessible browser-built-in key-value database, for storing information beyond what cookies can hold), new input types such as date for which the browser can expose easy user interface (so that we don't have to use our js-based calendar date-pickers), and browser-supported form validation will make developing web applications much simpler for the developers, and make them much faster for the users (since many things will be supported natively, rather than hacked in via javascript).
+</p>
+<h5>Why CSS3? Let's look at some fun examples.</h5>
+<br><a href="http://blacknegative.com/#!/loader/">http://blacknegative.com/#!/loader/</a>
+<br><a href="http://letters-inc.jp/">http://letters-inc.jp/</a>
+<br><a href="http://bluemelhuber.de/">http://bluemelhuber.de/</a>
+<br><a href="http://pepasalazar.com/">http://pepasalazar.com/</a>
+<br><a href="http://mccollcenter.org/artists-in-residence/austin-ballard">http://mccollcenter.org/artists-in-residence/austin-ballard</a>
+<br><a href="http://www.soniarentsch.com/">http://www.soniarentsch.com/</a>
+<br><a href="http://flavinsky.com/home">http://flavinsky.com/home</a>
+<br><a href="http://hellomonday.com/">http://hellomonday.com/</a>
+<br><a href="http://www.mobydigg.de/#!/">http://www.mobydigg.de/#!/</a>
+<br><a href="http://www.theclocksmiths.it/">http://www.theclocksmiths.it/</a>
+<p>and it get's even crazier...</p>
+<br><a href="http://www.justareflektor.com/">http://www.justareflektor.com/</a>
+<br><a href="http://armsglobe.chromeexperiments.com/">http://armsglobe.chromeexperiments.com/</a>
+<br><a href="http://www.findyourwaytooz.com/">http://www.findyourwaytooz.com/</a>
+<br><a href="http://mrdoob.com/lab/javascript/threejs/css3d/periodictable/">http://mrdoob.com/lab/javascript/threejs/css3d/periodictable/</a>
+<br><a href="https://dl.dropboxusercontent.com/u/6213850/WebGL/nyanCat/nyan.html">https://dl.dropboxusercontent.com/u/6213850/WebGL/nyanCat/nyan.html</a>
+<br><a href="http://dogatch.jp/mameshibaworld/index.html">http://dogatch.jp/mameshibaworld/index.html</a>
+
+<h5>And why responsive design?</h5>
+<p>Well, the more you browse websites on iPhones and Android powered handsets, the more apparent the reasons become. It's a tedious and frustrating task to constantly zoom in and out of page areas to see them at a readable size and then move the page left and right to read sentences that are hanging out of the viewport just enough to be annoying, whilst not inadvertently tapping a link you don't want to. Surely we can do better!
+</p>
+<p>One day, we will be able to build sites like these. But it will take quite a while.So, let's conclude our introduction with this <a href="https://www.youtube.com/watch?v=E1oZhEIrer4">https://www.youtube.com/watch?v=E1oZhEIrer4</a>
+</p>
+
+<h2>Set up Bracket, Github, and publish your first github hosted website</h2>
+<ol>
+    <li>Download Brackets from Brackets.io if you don't have it installed yet.</li>
+    <li>Go to Finder=>Document folder and create a new folder called MMP240
+        <li>Open Brackets, create a new file called index.html, type "my first github website" and save it in the MMP240 folder created from the above step.</li>
+        <li>Go to github.com. Create a new account, and choose to set up a free plan.
+            <img src="{{ 'img/githubaccount.png' | prepend: site.baseurl }}" class="img-responsive">
+        </li>
+        <li>After clicing "Finishing sign up", go to your email account and verify your email address.</li>
+        <li>Open Github on your computer, sign into the account you just created on github.com</li>
+        <li>Click the "+" sign on the upper left corner, choose "add", and the path Document/MMP240
+            <p class="alert alert-success">Warning 1! The default repo setting is "create", make sure you click "add", which is the tab to the left of "create"</p>
+            <img src="{{ 'img/addgitfolder.png' | prepend: site.baseurl }}" class="img-responsive">
+            <p class="alert alert-success">Warning 2! When you add the path, it's very important that you click on the MMP240 folder icon just once, so that the folder icon is highlighted, but you can't see the files that's actually inside the MMP240 folder.
+            </p>
+            <img src="{{ 'img/addpath.jpg' | prepend: site.baseurl }}" class="img-responsive">
+        </li>
+        <em>Now, if you go to your MMP240 folder, you should see a subfolder named .git. This folder contains files that will help you perform version control automatically from this point on.</em>
+        <li>In Github, type "first commit" in symmary, click <span class="badge">commit</span> button, and <span class="badge">publish</span> button at the top right corner
+            <img src="{{ 'img/firstcommit.png' | prepend: site.baseurl }}" class="img-responsive">
+            <img src="{{ 'img/publish.png' | prepend: site.baseurl }}" class="img-responsive">
+        </li>
+        <li>Now, click <span class="badge">branch</span>tab at the top middel bar, and create a new branch called “gh-pages”.
+            <img src="{{ 'img/createbranch.jpg' | prepend: site.baseurl }}" class="img-responsive">
+        </li>
+        <li>Make sure "gh-pages" is now selected as current branch.</li>
+        <li>After "gh-pages" is created successfully, you can view your page on http://[github user name].github.io/[repo name].
+            <ul>
+                <li>for example, if you go to http://zhenzhenBMCC.github.io/MMP240, you should see "my first github webiste" on that page.</li>
+            </ul>
+            <div class="alert alert-success" role="alert">Congratulations! You just hosted your first website through Github Pages.</div>
+        </li>
+        <li>Now, go back to Brackets at type something more, go to Github <span class="badge">Changes</span>tab on the top, type "second commit", click <span class="badge">Commit</span>, then<span class="badge">sync</span>, your website should be updated automatically.
+        </li>
+        <li>Take a look at the <span class="badge">History</span>tab of your github, you can see notes and history from all your past commits.
+            <p>If anything goes wrong at any point during development, you can always go to "history", choose a previous version and rollback to this old version. See picture below.
+            </p>
+            <img src="{{ 'img/rollback.jpg' | prepend: site.baseurl }}" class="img-responsive">
+        </li>
+</ol>
