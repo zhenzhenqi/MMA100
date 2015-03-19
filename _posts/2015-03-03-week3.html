@@ -41,7 +41,8 @@ layout: default
 <p>Let's go to Bracket preview, right click and choose Inspect Element.</p>
 <p>Put your cursor on different lines of html code and observe the corresponding section highlighted on the website. </p>
 <p>Now, find the nav tab line in html and read the corresponding css attributes on the right handside column (see picture below) </p>
-<img class="img-responsive" src="/img/week3/inspectelement.jpg">
+<img class="img-responsive" src="{{ '/img/week3/inspectelement.jpg' | prepend: site.baseurl }}">
+    
 <p>click on the attribute value of background-color, change to different color, and see what happens on yoru webiste.</p>
 <p>From now on, Inspect Element will be your best friend. Use it to quickly identify html code to be targeted, and quickly test css styling here before you right it down in custom.css file. It will save you lots of time and effort.</p>
 <p class="alert alert-success">Now you should be able to answer the question by yourself: what's the css code that will make navbar background and border transparent? Also, how to place the entire navbar a bit more down, and towards the center of the website?</p>
@@ -56,7 +57,7 @@ layout: default
 <p>Put the html code below inside the first "row class=intro" tag.</p>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/20/embedded/html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p class="alert alert-success">Question, how could we style the background into a dark grey color, make the height of this section 120% of the viewport height, and make the h1 text a light grey color, flow 40% from the top of the section? (see image below)
-    <img class="img-responsive" src="/img/week3/punchline.png">
+    <img class="img-responsive" src="{{ '/img/week3/punchline.png' | prepend: site.baseurl }}">
 </p>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/21/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>Now, if you drag the screen to iphone size, you will start to notice more issues. The big margin we added earlier on the navbar is offsetting the Brand Logo and the Menu tabs!!!</p>
@@ -67,19 +68,24 @@ layout: default
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/25/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <li>Let's fill the second intro block with the CEO's photo and more intro text.</li>
 <p class="alert alert-success">Question: We want to put a quote from the CEO on the upper left, and the CEO's picture on the lower right of that page. We also want the background to be white, how?(see image reference below)
-    <img class="img-responsive" src="img/week3/founder-rectangle.jpg">
+    <img class="img-responsive" src="{{ '/img/week3/founder-rectangle.jpg' | prepend: site.baseurl }}">
+    
 </p>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/26/embedded/html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/29/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p class="alert alert-success">Take a look at this page, do you like the design so far? To me, the CEO's photo is rectangular, which is a bit stagnant. So, I cropped it into a more playful circle in photoshop. (see below)
-    <img class="img-responsive" src="img/week3/founder-circle.jpg">
+    
+    <img class="img-responsive" src="{{ '/img/week3/founder-circle.jpg' | prepend: site.baseurl }}">
 </p>
+    
 <p>Better, isn't it. The credit at the bottom of the image is now aligned to the left. We can make it center aligned simply by adding a class="text-center" to inside the p tag.</p>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/30/embedded/html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>Take a look at the design on cellphone screen sized browser. Font is a bit too big. Let's add a h3 modifier in our media query section of the css code to solve this problem. CEO image is also too close to the quote block above it. Let's fix that by adding a margin-top to the image.</p>
 <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/u4e78y4j/31/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>Finally, let's make the image a bit smaller on cellphone by adjusting the xs columns it occupies in html file to "col-xs-5 col-xs-offset-7".</p>
-<img class="img-responsive img-cellphone" src="img/week3/founder-cellphone.jpg">
+    
+<img class="img-responsive img-cellphone" src="{{ '/img/week3/founder-cellphone.jpg' | prepend: site.baseurl }}">
+    
 <li>On the next intro block, let's put some featured projects, and a small line of intro underneath it.
     <p>So far, "col-xs-12" (full width on mobile design) has worked really well. Let's keep using it. And for this design on desktop, let's try "col-sm-10".</p>
 </li>
@@ -88,7 +94,8 @@ layout: default
 <iframe width="100%" height="300" src="//jsfiddle.net/u4e78y4j/33/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 <p>Some major issues with our image block. First, we need all images to be nested inside one single row. This can be achieved by adding additional columns around each image. Since all images need to add up to 12 columns, I added an additional image and made each image occupy 2 columns.</p>
 <iframe width="100%" height="300" src="//jsfiddle.net/u4e78y4j/34/embedded/html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-<img class="img-responsive" src="img/week3/feautured-upperalign.jpg">
+<img class="img-responsive" src="{{ '/img/week3/feautured-upperalign.jpg' | prepend: site.baseurl }}">
+    
 <p>Much better now. We still need to size the images so they are the same size. </p>
 <li>Last, let's fill the final intro page with RAAD's community project - THE LOWLINE.
     <p>We create three rows, one row for the title, one for embedding a TED talk video about this project, and a link to the actual project page for more information.</p>

@@ -44,11 +44,11 @@ layout: default
 
     <p>After all the mobile responsive issues are fixed, let's do a test on iPad mini.</p>
     <p>One last issue to fix, which is the display of image gallery on iPad. It's too small with all size images in one row. Let's add a col-sm-4 class and a col-md-2 class to make the 6 images display in two rows on iPads.</p>
-    <img class="img-responsive" src="img/week4/gallary-6.png">
+    <img class="img-responsive" src="{{ '/img/week4/gallary-6.png' | prepend: site.baseurl }}">
     <p>One last thing, let's make the left and right paddings 0 in iPad media query.</p>
-    <img class="img-responsive" src="img/week4/gallery-3.png">
+    <img class="img-responsive" src="{{ '/img/week4/gallery-3.png' | prepend: site.baseurl }}">
     <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/s7cour24/12/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-    <img class="img-responsive" src="img/week4/gallery-nopadding.png">
+    <img class="img-responsive" src="{{ '/img/week4/gallery-nopadding.png' | prepend: site.baseurl }}">
     <p>Perfecto!</p>
 
     <div class="row">
@@ -78,7 +78,7 @@ layout: default
             </li>
             <li>Change the blue hyperlink to white, and give it text-decoration: underscore.</li>
             <iframe width="100%" height="200" src="//jsfiddle.net/s7cour24/22/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <img class="img-responsive" src="img/week4/textdecoration.png">
+            <img class="img-responsive" src="{{ '/img/week4/textdecoration.png' | prepend: site.baseurl }}">
             <p>Your contact page should look like this now. Quite nice. Isn't it?</p>
             <li>Now, publish this site to either github or your CUNY FTP account.</li>
             <li>Go to <a href="https://developers.google.com/maps/documentation/embed/">https://developers.google.com/maps/documentation/embed/</a>, click on "build a map now"</li>
@@ -92,12 +92,12 @@ layout: default
             <li>Click "create new browser key" button.</li>
             <p>Enter the website address you justed published, and click "ok".</p>
             <li>Now, you should see an API key that looks like this one below (highlighted in RED)</li>
-            <img class="img-responsive" src="img/week4/APIkey.jpg">
+            <img class="img-responsive" src="{{ '/img/week4/APIkey.jpg' | prepend: site.baseurl }}">
             <li>Copy it and paste it back into the first tab where you generated the Google Map, and click "done"</li>
             <p>Now, you should see the iframe code apearing at the bottom.</p>
-            <img class="img-responsive" src="img/week4/googlemap.jpg">
+            <img class="img-responsive" src="{{ '/img/week4/googlemap.jpg' | prepend: site.baseurl }}">
             <li>In contact.html, write a new div class="row" below the address div, and paste the iframe code you have in there. This is the final result.</li>
-            <img class="img-responsive" src="img/week4/contact-googlemap.png">
+            <img class="img-responsive" src="{{ '/img/week4/contact-googlemap.png' | prepend: site.baseurl }}">
             <p>You can also customize your Google Map. If you are interested, read <a href="https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map">https://developers.google.com/maps/tutorials/fundamentals/adding-a-google-map</a>
             </p>
             <p>This is the way I customized it. You can check it out at
@@ -105,7 +105,7 @@ layout: default
             </p>
             <p>You can also download my code at <a href="https://github.com/zhenzhenqi/MMP240demo">https://github.com/zhenzhenqi/MMP240demo</a>
             </p>
-            <img class="img-responsive" src="img/week4/customizedmap.png">
+            <img class="img-responsive" src="{{ '/img/week4/customizedmap.png' | prepend: site.baseurl }}">
             <li>Final step, in Chrome, check for responsiveness of this page on cellphone and iPad.</li>
             <p>The main issue is spacing between Address and the navbar.</p>
             <p>Ususally, we use media query to solve this problem. But here, because navbar's height never changes, we can simply solve this problem by giving Address a fixed margin-top: 100px.</p>

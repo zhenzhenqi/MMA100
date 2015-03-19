@@ -45,7 +45,8 @@ layout: default
     <p>Bootstap has already has a very good set of demos online. Click <a href="http://getbootstrap.com/css/#grid" target="_blank">here</a> to go to Boostrap's offical documentation.</p>
     <p>Bootstrap scaffolding has three basic elements, Container, Row, and Column. Whenever you start a new page, create a new Container insider Body Tag. Then, puts rows right inside the container, and Columns inside each Row.</p>
     <p>Bootstrap already has designed some basic mediaquery settings for us, through four Column classes, col-xs, col-sm, col-md, col-lg.</p>
-    <img src="img/bootstrapbreakpoints.jpg" class="img-responsive">
+    <img src="{{ '/img/bootstrapbreakpoints.jpg' | prepend: site.baseurl }}" class="img-responsive">
+
     <p>For beginners, we can simply remember that any column design based on col-xs class will be rendered on cellphones, designs based on col-sm class will be rendered on tablets, designs based on col-md and col-lg will be rendered based on desktops.</p>
     <p>We will use their code to do some execrise. But before that, let's add some stying code so we can see every DIV clearly.</p>
     <p>Copy and paste the code below inside your <span class="span-class">custom.css</span> file.</p>
