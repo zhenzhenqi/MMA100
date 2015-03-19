@@ -3,7 +3,7 @@
         <ul class="nav nav-pills nav-stacked text-center">
 
             <li role="presentation" class="active">
-                <a href="/MMP240/">Home</a>
+                <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
             </li>
             {% for post in site.posts reversed %}
             <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
