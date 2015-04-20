@@ -8,15 +8,41 @@ layout: default
     <li>First, let's finish setting up the contact page the same way we set up about page.
     </li>
     <li>Time to draw a little space alien.
-    
+    {% highlight js %}
+        stroke(0);
+        rect(100, 100, 20, 100);
+        ellipse(100, 70, 60, 60);
+        ellipse(81, 70, 16, 32);
+        ellipse(119, 70, 16, 32);
+        line(90, 150, 80, 160);
+        line(110, 150, 120, 160);
+    {% endhighlight %}
     </li>
-    <li>Carousel's images should all be the same dimension.
+    <li>Draw only the eyes, color it orange, when mouse is pressed.
+        {% highlight js %}
+            if (mouseIsPressed) {
+        noStroke();
+        fill(244, 35, 0);
+        ellipse(81, 70, 16, 32);
+        ellipse(119, 70, 16, 32);
+        
+    } else {
+        stroke(0);
+        fill('rgba(51, 51, 51, 0.5)');
+        rect(100, 100, 20, 100);
+        ellipse(100, 70, 60, 60);
+        ellipse(81, 70, 16, 32);
+        ellipse(119, 70, 16, 32);
+        line(90, 150, 80, 160);
+        line(110, 150, 120, 160);
+    }
+        {% endhighlight %}
     </li>
     <li>
-        <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/snh6qmhw/1/embedded/html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        
     </li>
     <li>
-        <iframe width="100%" height="300" src="//jsfiddle.net/nycucumber/snh6qmhw/1/embedded/css" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        
     </li>
 </ol>
 </div>
