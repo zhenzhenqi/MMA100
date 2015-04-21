@@ -9,7 +9,38 @@ layout: default
         <p>Here is the link to the latest p5.js cdn. <a href="http://cdnjs.com/libraries/p5.js/">http://cdnjs.com/libraries/p5.js/</a></p>
         <p>Please check to make sure you are linking version 4.4, not 4.3. P5 just updated to a new version and there are a few important functions we will use that's only available in the 4.4 version.</p>
         <p>Please also link .min version of p5.js, p5.dom.js, and p5.sound.js.</p>
-        <li>Now, link your own sketch.js at the very bottom of html page, before html tag closes.</li>
+        <li>Now, link your own sketch.js at the very bottom of html page, before html tag closes.
+        {% highlight js %} 
+        console.log("contact page animation is loaded!");
+        
+        function setup() {
+            var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+            myCanvas.parent('contact-animation');
+        }
+        function draw(){
+            clear();
+        }
+            
+        {% endhighlight %} 
+
+
+function draw() {
+        </li>
+        
+        <li>Here is the setup on contact.html.
+        {% highlight js %} 
+        <body id="contact-animation">
+        <script src="contact.js"></script>
+        </body>
+        {% endhighlight %} 
+        </li>
+        <li>Setup on custom.css to make sure that the sketch shows up at the top left corner of the html page.
+        {% highlight js %} 
+            #contact-animation {
+                position: absolute;
+            }
+        {% endhighlight %}
+        </li>
         <li>Time to draw a little space alien. 
             {% highlight js %} 
             stroke(0); rect(100, 100, 20, 100); 
