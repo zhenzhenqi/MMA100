@@ -1,48 +1,52 @@
---- 
-layout: default 
----
+--- layout: default ---
 
 <div class="row">
-<h2>P5 continued</h2>
-<ol>
-    <li>First, let's finish setting up the contact page the same way we set up about page.
-    </li>
-    <li>Time to draw a little space alien.
-    {% highlight js %}
-        stroke(0);
-        rect(100, 100, 20, 100);
-        ellipse(100, 70, 60, 60);
-        ellipse(81, 70, 16, 32);
-        ellipse(119, 70, 16, 32);
-        line(90, 150, 80, 160);
-        line(110, 150, 120, 160);
-    {% endhighlight %}
-    </li>
-    <li>Draw only the eyes, color it orange, when mouse is pressed.
-        {% highlight js %}
-            if (mouseIsPressed) {
-        noStroke();
-        fill(244, 35, 0);
-        ellipse(81, 70, 16, 32);
-        ellipse(119, 70, 16, 32);
-        
-    } else {
-        stroke(0);
-        fill('rgba(51, 51, 51, 0.5)');
-        rect(100, 100, 20, 100);
-        ellipse(100, 70, 60, 60);
-        ellipse(81, 70, 16, 32);
-        ellipse(119, 70, 16, 32);
-        line(90, 150, 80, 160);
-        line(110, 150, 120, 160);
+    <h2>P5 continued</h2>
+    <ol>
+        <li>First, let's finish setting up the contact page the same way we set up about page.
+        </li>
+        <li>Time to draw a little space alien. {% highlight js %} stroke(0); rect(100, 100, 20, 100); ellipse(100, 70, 60, 60); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); line(90, 150, 80, 160); line(110, 150, 120, 160); {% endhighlight %}
+        </li>
+        <li>Draw only the eyes, color it orange, when mouse is pressed. {% highlight js %} if (mouseIsPressed) { noStroke(); fill(244, 35, 0); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); } else { stroke(0); fill('rgba(51, 51, 51, 0.5)'); rect(100, 100, 20, 100); ellipse(100, 70, 60, 60); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); line(90, 150, 80, 160); line(110, 150, 120, 160); } {% endhighlight %}
+        </li>
+        <li>Now, let's use 2 dimentional Perlin Noise to draw our interactive ocean wave. 
+            {% highlight js %} 
+            var yoff = 0.0; // 2nd dimension of perlin noise
+
+function setup() {
+    var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+    myCanvas.parent('contact-animation');
+}
+
+function draw() {
+    //    background(255);
+    clear();
+    noStroke();
+    fill("rgba(0, 0, 0, 0.2)");
+
+    beginShape();
+    var xoff = 0; 
+
+    // Iterate over horizontal pixels to draw one wave
+    for (var x = 0; x <= width + 10; x += 10) {
+        var y = map(noise(xoff, yoff), 0, 1, height - 400, height);
+        //draw each dot along the wave
+        vertex(x, y);
+        // Increment x dimension for noise
+        xoff += 0.05;
     }
-        {% endhighlight %}
-    </li>
-    <li>
-        
-    </li>
-    <li>
-        
-    </li>
-</ol>
+    //draw a point at the lower right corner of the screen
+    vertex(width, height);
+    //draw a point at the lower left corner of the screen
+    vertex(0, height);
+    //connect all dots along the wave, and the two points at the corner
+    endShape();
+
+    // increment y dimension for the next wave
+    yoff += 0.01;
+}
+            {% endhighlight %} 
+        </li>
+
+    </ol>
 </div>
