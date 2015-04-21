@@ -6,10 +6,41 @@ layout: default
     <h2>P5 continued</h2>
     <ol>
         <li>First, let's finish setting up the contact page the same way we set up about page.
+        <p>Here is the link to the latest p5.js cdn. <a href="http://cdnjs.com/libraries/p5.js/">http://cdnjs.com/libraries/p5.js/</a></p>
+        <p>Please check to make sure you are linking version 4.4, not 4.3. P5 just updated to a new version and there are a few important functions we will use that's only available in the 4.4 version.</p>
+        <p>Please also link .min version of p5.js, p5.dom.js, and p5.sound.js.</p>
+        <li>Now, link your own sketch.js at the very bottom of html page, before html tag closes.</li>
+        <li>Time to draw a little space alien. 
+            {% highlight js %} 
+            stroke(0); rect(100, 100, 20, 100); 
+            ellipse(100, 70, 60, 60); ellipse(81, 70, 16, 32); 
+            ellipse(119, 70, 16, 32); 
+            line(90, 150, 80, 160); 
+            line(110, 150, 120, 160); 
+            {% endhighlight %}
         </li>
-        <li>Time to draw a little space alien. {% highlight js %} stroke(0); rect(100, 100, 20, 100); ellipse(100, 70, 60, 60); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); line(90, 150, 80, 160); line(110, 150, 120, 160); {% endhighlight %}
-        </li>
-        <li>Draw only the eyes, color it orange, when mouse is pressed. {% highlight js %} if (mouseIsPressed) { noStroke(); fill(244, 35, 0); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); } else { stroke(0); fill('rgba(51, 51, 51, 0.5)'); rect(100, 100, 20, 100); ellipse(100, 70, 60, 60); ellipse(81, 70, 16, 32); ellipse(119, 70, 16, 32); line(90, 150, 80, 160); line(110, 150, 120, 160); } {% endhighlight %}
+        <li>Draw only the eyes, color it orange, when mouse is pressed. 
+            {% highlight js %}                  
+            
+            if (mouseIsPressed) 
+            { 
+                noStroke(); 
+                fill(244, 35, 0); 
+                ellipse(81, 70, 16, 32); 
+                ellipse(119, 70, 16, 32); 
+            } 
+            else { 
+                stroke(0); 
+                fill('rgba(51, 51, 51, 0.5)');
+                rect(100, 100, 20, 100); 
+                ellipse(100, 70, 60, 60); 
+                ellipse(81, 70, 16, 32); 
+                ellipse(119, 70, 16, 32); 
+                line(90, 150, 80, 160); 
+                line(110, 150, 120, 160); 
+                } 
+            
+            {% endhighlight %}
         </li>
         <li>Now, let's use 2 dimentional Perlin Noise to draw our interactive ocean wave. 
             {% highlight js %} 
@@ -49,5 +80,10 @@ function draw() {
 }
             {% endhighlight %} 
         </li>
+    <li>Let's convert this sketch so that as many waves could be generated and gradually fade away when mouse is clicked.
+       beginShape();
+       endShape();
+        
+    </li>
     </ol>
 </div>
