@@ -5,7 +5,38 @@ layout: default
 <div class="row">
     <h2>OOP</h2>
     <ol>
-        <li>First execute this code in a sketch. Change it's width and height and append it to your own html page.
+        <li>This is an example similar to the alien's eyes example from last week.
+            {% highlight js %}
+            console.log("sketch.js loaded");
+
+var x;
+var y;
+var radius;
+var speed;
+
+
+
+function setup() {
+    x = random(200, width);
+    y = random(200, height);
+    radius = random(10, 30);
+    speed = 1;
+
+    var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+    myCanvas.parent('myP5Container');
+}
+
+
+function draw() {
+    clear();
+    fill("red");
+    x = x + random(-speed, speed);
+    y = y + random(-speed, speed);
+    ellipse(x, y, radius, radius);
+}
+            {% endhighlight %}
+        </li>
+        <li>Imagine you want 3 more bugs randomly jittering on the screen. How can you organize the code in a way that's most efficient?
             {% highlight js %} 
             var bug;  // Declare object
 
