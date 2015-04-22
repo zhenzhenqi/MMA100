@@ -4,8 +4,8 @@ layout: default
 
 <div class="row">
     <h2>OOP</h2>
-    <ol>I looked on the internet, trying to find a good verbal explanatino of OOP, and wasn't very satisfied. So, let's execute a simple example below and talk about what it is and why it's good.
-        <li>First execute this code in a sketch.
+    <ol>
+        <li>First execute this code in a sketch. Change it's width and height and append it to your own html page.
             {% highlight js %} 
             var bug;  // Declare object
 
@@ -38,6 +38,48 @@ function Jitter() {
   }
 };
 {% endhighlight %}
+        </li>
+        <li>Now, create three more bugs called bug2, bug3, and bug4.
+        </li>
+        <li>Now, let's create an object array to hold 50 bugs for us.
+            var bugs = []; // array of Jitter objects
+
+function setup() {
+  createCanvas(710, 400);
+  // Create objects
+  for (var i=0; i<50; i++) {
+    bugs.push(new Jitter());
+  }
+}
+
+function draw() {
+  background(50, 89, 100);
+  for (var i=0; i<bugs.length; i++) {
+    bugs[i].move();
+    bugs[i].display();
+  }
+}
+
+// Jitter class
+function Jitter() {
+  this.x = random(width);
+  this.y = random(height);
+  this.diameter = random(10, 30);
+  this.speed = 1;
+
+  this.move = function() {
+    this.x += random(-this.speed, this.speed);
+    this.y += random(-this.speed, this.speed);
+  };
+
+  this.display = function() {
+    ellipse(this.x, this.y, this.diameter, this.diameter);
+  };
+}
+        
+        </li>
+        <li>Now, let's make and store a new bug every time when mouse is clicked.
+            
         </li>
     </ol>
 </div>
