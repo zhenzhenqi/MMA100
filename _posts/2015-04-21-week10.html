@@ -154,7 +154,7 @@ function Jitter() {
 };
          {% endhighlight %} 
         <p>here is the image for the script</p>
-        <img src="img/bugs.jpg">
+        <img src="{{ '/img/bugs.jpg' | prepend: site.baseurl }}">
         </li>
         <li>Finally, let's convert our Ocean Wave script from last week to OOP format, so everytime when the user clicks, a new ocean wave gets generated and dies down on its own.
             {% highlight js %}
