@@ -2,8 +2,8 @@
 title: COMP104
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is the class note for Multimedia Development class, an intro-level Web Development class offered by City University of New York.
-baseurl: "/MMP240"
+  This is the class note for Multimedia Development class, an intro-level Web and mobil development class offered by Pi Art Center, New York.
+baseurl: "/COMP104"
 url: "/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
