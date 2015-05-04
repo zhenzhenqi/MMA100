@@ -1,4 +1,6 @@
---- layout: default ---
+--- 
+layout: default 
+---
 
 <div class="row">
     <h2>Configuring Custom Domain</h2>
@@ -18,3 +20,54 @@
     <h4>A great resource for learning interaction design and OOP. Make sure you install Java Plugin to see it.</h4>
     <a href="http://www.learningprocessing.com/examples/">http://www.learningprocessing.com/examples/</a>
 </div>
+
+    <h4>Remember the ocean wave example we did in class two weeks ago? Let's revisit it quickly and convert it to an OOP sketch.</h4>
+
+    {% highlight js %} 
+            var yoff = 0.0; // 2nd dimension of perlin noise
+
+function setup() {
+    var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+    myCanvas.parent('contact-animation');
+}
+
+function draw() {
+    //    background(255);
+    clear();
+    noStroke();
+    fill("rgba(0, 0, 0, 0.2)");
+
+    beginShape();
+    var xoff = 0; 
+
+    // Iterate over horizontal pixels to draw one wave
+    for (var x = 0; x <= width + 10; x += 10) {
+        var y = map(noise(xoff, yoff), 0, 1, height - 400, height);
+        //draw each dot along the wave
+        vertex(x, y);
+        // Increment x dimension for noise
+        xoff += 0.05;
+    }
+    //draw a point at the lower right corner of the screen
+    vertex(width, height);
+    //draw a point at the lower left corner of the screen
+    vertex(0, height);
+    //connect all dots along the wave, and the two points at the corner
+    endShape();
+
+    // increment y dimension for the next wave
+    yoff += 0.01;
+}
+            {% endhighlight %} 
+                             
+      
+
+    {% highlight js %} 
+        
+                             
+    {% endhighlight %}   
+                             
+                             
+                             
+                             
+                             
