@@ -5,4 +5,4 @@
 	ignorecase = true
 	precomposeunicode = true
 [remote "origin"]
-	url = https://github.com/zhenzhenqi/MMP240
+	url = https://github.com/zhenzhenqi/MMA100
